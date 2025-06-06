@@ -21,7 +21,19 @@ const localNote = computed((): string => {
 </script>
 
 <template>
+  <h1>会員管理</h1>
   <section>
+    <nav id="breadcrumbs">
+      <ul>
+        <li><NuxtLink v-bind:to="{ name: 'index' }">TOP</NuxtLink></li>
+        <li>
+          <NuxtLink v-bind:to="{ name: 'member-memberList' }"
+            >会員リスト</NuxtLink
+          >
+        </li>
+        <li>会員詳細情報</li>
+      </ul>
+    </nav>
     <h2>会員詳細情報</h2>
     <dl>
       <dt>ID</dt>

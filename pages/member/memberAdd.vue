@@ -21,7 +21,19 @@ const onAdd = (): void => {
 </script>
 
 <template>
+  <h1>会員管理</h1>
   <section>
+    <nav id="breadcrumbs">
+      <ul>
+        <li><NuxtLink v-bind:to="{ name: 'index' }">TOP</NuxtLink></li>
+        <li>
+          <NuxtLink v-bind:to="{ name: 'member-memberList' }"
+            >会員リスト</NuxtLink
+          >
+        </li>
+        <li>会員情報追加</li>
+      </ul>
+    </nav>
     <h2>会員情報追加</h2>
     <p>情報を入力し、登録ボタンをクリックしてください。</p>
     <form v-on:submit.prevent="onAdd">
