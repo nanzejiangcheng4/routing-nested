@@ -22,12 +22,9 @@ useState<Map<number, Member>>("memberList", (): Map<number, Member> => {
 </script>
 
 <template>
-  <header>
-    <h1>ネストされたルーティングサンプル</h1>
-  </header>
-  <main>
+  <NuxtLayout>
     <NuxtPage />
-  </main>
+  </NuxtLayout>
 </template>
 
 <style>
